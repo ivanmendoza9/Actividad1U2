@@ -13,11 +13,18 @@ namespace singleton
 {
     public class Central_911
     {
+        //este atributo almacena la unica instancia de la clase
+        //es static, por lo que pertenece a la clase y no a los objetos
+        //permite que todas las llamadas a Obtener_Instancia() regresen el mismo objeto
         private static Central_911 _instance;
+
         private static readonly object _lock = new object();
 
         public string Central { get; private set; }
 
+        //el constructor esta declarado como private para evitar que otras clases creen objetos con new
+        //esto obliga a que la instancia solo se cree mediante el método Obtener_Instancia() lo que hace
+        //que asi se controle solo una instancia
         private Central_911()
         {
             Central = "Central 911";
