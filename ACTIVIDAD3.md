@@ -1,4 +1,6 @@
-#
+# Actividad3U2
+## Elaborado por: Mendoza Suarez Ivan Gustavo 
+## No. de Control: 22210910
 ```csharp
 using System;
 using System.Collections.Generic;
